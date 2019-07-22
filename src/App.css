@@ -1,0 +1,21 @@
+.table{
+  height: 400px;
+  overflow-y:auto;
+}
+
+.words{
+  width: 100%;
+}
+
+.words tr:nth-child(even){background-color: #f2f2f2;}
+
+.words tr:hover {background-color: #ddd;}
+
+.words td, .words th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr{
+  text-transform: capitalize;
+}
