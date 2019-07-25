@@ -31,9 +31,12 @@ class ReviewWordCloud extends React.Component {
         let reviews = ""
         for (let review of reviewsArray) {
             let rev = review.replace(".", "")
-            rev = rev.replace(/,|!|_|&#39;|-|10/g,'')
+            rev = rev.replace(/,|!|_|&#39;|-|\d|\./g, '')
+            if(rev != ''){
             reviews += " " + rev.toLowerCase()
         }
+        }
+        reviews = reviews.trim()
         console.log(reviews)
         return reviews
     }
